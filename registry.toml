@@ -52,8 +52,3 @@ description = "Provides functions related to time and date."
 name = "binary-heap"
 git = "https://github.com/tttmmmyyyy/fixlang-binary-heap.git"
 description = "provides a binary heap implementation."
-
-[[projects]]
-name = "fast-iter"
-git = "https://github.com/tttmmmyyyy/fixlang-fast-iter.git"
-description = "High performance iterator library."
