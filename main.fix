@@ -51,6 +51,7 @@ main : IO ();
 main = (
     // Prepare `module_docs` directory.
     let temp_docs = "module_docs";
+
     // Remove it if it exists.
     let (_, status) = *Subprocess::run_string("rm", ["rm", "-rf", temp_docs], "").try(exit_with_msg(1));
     check_exit_staus(status, "`rm -rf temp_docs`");;
@@ -145,25 +146,31 @@ main = (
     // Pop the working directory.
     change_dir("..");;
 
+    // Change the working directory to `temp_docs`.
+    change_dir(temp_docs);;
+
     // Get the list of markdown files in `temp_docs` by `find "temp_docs" -name "*.md"`.
-    let commands = ["find", temp_docs, "-name", "*.md"];
+    let commands = ["find", ".", "-name", "*.md"];
     let ((md_files, err), status) = *Subprocess::run_string("find", commands, "").try(exit_with_msg(1));
     when(err.get_size > 0, eprintln(err));;
     check_exit_staus(status, "`" + commands.to_iter.join(" ") + "`");;
 
     // Parse md_files.
-    let md_files = md_files.split("\n").map(strip_spaces).filter(|s| s.get_size > 0).to_array;
-    let md_files = md_files.sort_by(|(a, b)| a < b);
+    let md_files = md_files.split("\n").map(strip_spaces).filter(|s| s.get_size > 0).to_array.sort_by(|(a, b)| a < b);
 
-    // Concatenate all markdown files.
-    // println("Concatenating all document files...");;
-    // with_file("doc.md", "w", |file|
-    //     md_files.to_iter.zip(count_up(0)).fold_m((), |(md_file_path, i), _|
-    //         let content = *read_file_string(md_file_path);
-    //         when(i > 0, write_string(file, "\n\n"));;
-    //         write_string(file, content)
-    //     )
-    // ).try(exit_with_msg(1));;
+    // Create `index.md`.
+    let index_md = "index.md";
+    with_file(index_md, "w", |file|
+        write_string(file, "# Documentation\n\n");;
+        md_files.to_iter.fold_m((), |md_file, _|
+            let module_name = md_file.get_sub("./".get_size, md_file.get_size - ".md".get_size);
+            let line = "[" + module_name + "](" + md_file + ")\n";
+            write_string(file, line)
+        )
+    ).try(exit_with_msg(1));;
+
+    // Pop the working directory.
+    change_dir("..");;
     
     pure()
 );
