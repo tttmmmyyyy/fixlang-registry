@@ -1,0 +1,10 @@
+proj_file_hash = "5e9c47a5dfb8a0754d10c1ffc29ca5d8"
+
+[[dependencies]]
+name = "subprocess"
+version = "1.0.1"
+path = ".fixlang/deps/subprocess_1.0.1"
+
+[dependencies.git]
+repo = "https://github.com/tttmmmyyyy/fixlang-subprocess.git"
+rev = "c5fadd3b72c504dd887ad59c38191c270a05d5ed"
