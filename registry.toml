@@ -132,3 +132,8 @@ description = "Minilib: JSON encoder/decoder"
 name = "minilib-xml"
 git = "https://github.com/pt9999/fixlang-minilib-xml.git"
 description = "Minilib: XML encoder/decoder"
+
+[[projects]]
+name = "ez-scripting"
+git = "https://github.com/tttmmmyyyy/ez_scripting.git"
+description = "This small library provides utility functions to create scripts in the Fix programming language."
