@@ -147,3 +147,8 @@ description = "Packed boolean array structure."
 name = "cp-library"
 git = "https://github.com/tttmmmyyyy/cp-library.git"
 description = "A library for competitive programming in Fixlang."
+
+[[projects]]
+name = "ring-buffer"
+git = "https://github.com/tttmmmyyyy/ring-buffer.git"
+description = "Ring buffer implementation in Fix language"
