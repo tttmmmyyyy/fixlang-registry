@@ -152,3 +152,8 @@ description = "A library for competitive programming in Fixlang."
 name = "ring-buffer"
 git = "https://github.com/tttmmmyyyy/ring-buffer.git"
 description = "Ring buffer implementation in Fix language"
+
+[[projects]]
+name = "gmp-fix"
+git = "https://github.com/tttmmmyyyy/fixlang-gmp.git"
+description = "Bindings to GNU Multiple Precision Library."
