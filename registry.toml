@@ -157,3 +157,8 @@ description = "Ring buffer implementation in Fix language"
 name = "gmp-fix"
 git = "https://github.com/tttmmmyyyy/fixlang-gmp.git"
 description = "Bindings to GNU Multiple Precision Library."
+
+[[projects]]
+name = "mpfr-fix"
+git = "https://github.com/tttmmmyyyy/fixlang-mpfr.git"
+description = "Bindings to GNU MPFR Library."
