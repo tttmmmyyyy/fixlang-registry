@@ -170,5 +170,5 @@ description = "Bindings to Cairo graphics library."
 
 [[projects]]
 name = "cairo-rsvg-fix"
-git = "https://github.com/tttmmmyyyy/fixlang-cairo-rsvg.git"
+git = "https://github.com/tttmmmyyyy/cairo-rsvg-fix.git"
 description = "Bindings to RSVG graphics libraries."
