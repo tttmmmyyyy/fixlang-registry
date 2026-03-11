@@ -167,3 +167,8 @@ description = "Bindings to GNU MPFR Library."
 name = "cairo-fix"
 git = "https://github.com/tttmmmyyyy/fixlang-cairo.git"
 description = "Bindings to Cairo graphics library."
+
+[[projects]]
+name = "cairo-rsvg-fix"
+git = "https://github.com/tttmmmyyyy/fixlang-cairo-rsvg.git"
+description = "Bindings to RSVG graphics libraries."
