@@ -172,3 +172,8 @@ description = "Bindings to Cairo graphics library."
 name = "cairo-rsvg-fix"
 git = "https://github.com/tttmmmyyyy/cairo-rsvg-fix.git"
 description = "Bindings to RSVG graphics libraries."
+
+[[projects]]
+name = "json"
+git = "https://github.com/tttmmmyyyy/fixlang-json.git"
+description = "Reads and writes JSON documents, either into a tree or straight into the values a program wants."
