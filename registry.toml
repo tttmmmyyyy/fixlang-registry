@@ -177,3 +177,8 @@ description = "Bindings to RSVG graphics libraries."
 name = "json"
 git = "https://github.com/tttmmmyyyy/fixlang-json.git"
 description = "Reads and writes JSON documents, either into a tree or straight into the values a program wants."
+
+[[projects]]
+name = "std-experimental"
+git = "https://github.com/tttmmmyyyy/fixlang-std-experimental.git"
+description = "Provides the module `Std.Experimental`: additions to `Std` whose design is not settled yet."
